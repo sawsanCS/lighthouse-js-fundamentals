@@ -1,15 +1,21 @@
-for (let i=100; i<=200; i++){
-  if (i%12 === 0){
-    console.log("LoopyLighthouse \n");
+function loopyLighthouse(range, multiples, words){
+
+for (let i=range[0]; i<range[1]; i++){
+
+  if (i%(multiples[0]*multiples[1]) === 0){
+    console.log(words[0]+words[1]+"\n");
   }
-  else if(i%3 === 0){
-    console.log("Loopy \n");
+  else if(i%multiples[0] === 0){
+    console.log(words[0]+"\n");
   }
-  else if (i%4 === 0){
-    console.log("Lighthouse \n");
+  else if (i%multiples[1] === 0){
+    console.log(words[1]+"\n");
   }
   else{
     console.log(i+"\n");
   }
   
 }
+}
+loopyLighthouse([15, 90], [2, 5], ["Batty", "Beacon"]);
+
